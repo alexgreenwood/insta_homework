@@ -1,0 +1,35 @@
+<div class="page-header">
+  <h1>Home</h1>
+</div>
+
+<p><a href="/photos/new" class="btn btn-primary">Add a New Picture</a></p>
+
+<table class="table table-hover">
+  <tbody>
+    <% @photos.each do |photo| %>
+      <tr>
+        <td>
+          <img href="/photos/<%= photo.id %>" src="<%= photo.image_url %>" width="500" height="500">
+        </td>
+        <td><%= photo.caption %></td>
+        <td>
+          <a href="/photos/<%= photo.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/photos/<%= photo.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_photo/<%= photo.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+<!--         </td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
