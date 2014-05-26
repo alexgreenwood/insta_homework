@@ -52,7 +52,7 @@ class PhotosController < ApplicationController
 
   def wall
 
-    @photo = current_user.photo.all
+    @photos = current_user.photos
 
   end
 
