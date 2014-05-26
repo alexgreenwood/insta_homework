@@ -51,18 +51,13 @@ class PhotosController < ApplicationController
   end
 
   def wall
-
     @photos = current_user.photos
-
   end
 
 
 
   def favorites
-
-
-
-
+    @photos = current_user.favorite_photos
   end
 
 
