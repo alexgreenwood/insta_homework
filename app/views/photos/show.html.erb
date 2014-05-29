@@ -8,8 +8,10 @@
 
   <dd><%= @photo.user.email %></dd>
 
-  <dd><a href="/favorites/new" class="bts btn-primary"> Favorite </dd>
+  <dd>
 
+    <a href="/create_favorite?photo_id=<%= @photo.id %>&user_id=<%= current_user.id %>" class="btn btn-primary">Favorite</a>
+  </dd>
 
   <dd class="media-list">
     <% @photo.comments.each do |comment| %>
