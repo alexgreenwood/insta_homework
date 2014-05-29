@@ -8,7 +8,7 @@
 
   <dd><%= @photo.user.email %></dd>
 
-  <dd><a href="/favorites/new" class="bts btn-primary"> Favorite <</dd>
+  <dd><a href="/favorites/new" class="bts btn-primary"> Favorite </dd>
 
 
   <dd class="media-list">
@@ -40,7 +40,7 @@
     <div class="form-group">
       <div class="col-sm-10">
         <input type="hidden" id="photo_id" name="photo_id" placeholder="Photo" class="form-control" value="<%= @photo.id %>">
-        <input type="hidden" id="user_id" name="current_user.id" placeholder="User" class="form-control" value="<%= @photo.user_id %>">
+        <input type="hidden" id="user_id" name="current_user.id" placeholder="User" class="form-control" value="<%= current_user.id %>">
       </div>
     </div>
 
